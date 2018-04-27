@@ -1,0 +1,12 @@
+{
+	"error" : {
+		"errorCode" : "405", 
+		"message" : "Method Not Allowed"
+	},
+	"result" : {
+		"error" : {
+			"errorCode" : "405", 
+			"message" : "Method Not Allowed"
+		}	
+	}
+}

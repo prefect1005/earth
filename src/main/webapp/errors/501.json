@@ -1,0 +1,12 @@
+{
+	"error" : {
+		"errorCode" : "501", 
+		"message" : "Not Implemented"
+	},	
+	"result" : {
+		"error" : {
+			"errorCode" : "501", 
+			"message" : "Not Implemented"
+		}	
+	}
+}

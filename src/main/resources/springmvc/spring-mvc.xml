@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<mvc:annotation-driven />
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.gravity.common.support.springframework.interceptor.LocaleInterceptor" />
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.gravity.common.support.springframework.interceptor.LoginInterceptor" />
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.gravity.common.support.springframework.interceptor.IndentificationInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	<!-- Spring MVC上下文中定义一个org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler，
+	它会像一个检查员，对进入DispatcherServlet的URL进行筛查，如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，
+	如果不是静态资源的请求，才由DispatcherServlet继续处理。  -->
+	<mvc:default-servlet-handler /> 
+	
+	<!-- 对静态资源文件的访问 Spring MVC来处理静态资源-->
+	<mvc:resources mapping="/static/**" location="/WEB-INF/static/" cache-period="31556926"/> 
+	<!--  
+	<mvc:resources mapping="/img/**" location="/WEB-INF/static/img/" cache-period="31556926"/> 
+	<mvc:resources mapping="/js/**" location="/WEB-INF/static/js/" cache-period="31556926"/> 
+	<mvc:resources mapping="/css/**" location="/WEB-INF/static/css/" cache-period="31556926"/>
+	<mvc:resources mapping="/fonts/**" location="/WEB-INF/static/fonts/" cache-period="31556926"/>  
+	-->
+		
+	<!-- 当访问主页时自动转发到index控制器。
+ 	<mvc:view-controller path="/" view-name="redirect:/home/index"/>  -->
+ 	
+ 	<!-- 扫描指定包下的标签映射为bean。-->
+	<context:component-scan base-package="com.gravity" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".jsp" />
+		<property name="exposedContextBeanNames">
+			<list>
+				<value>urlConfig</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+		<!-- <property name="maxUploadSize" value="204800" />200 KB 204800 -->
+		<!-- <property name="maxUploadSize" value="1048576" />1 MB 1048576 -->
+	</bean>
+
+	<!-- <bean id="localeResolver" class="com.jpajob.api.support.springframework.i18n.CustomCookieLocaleResolver"> 
+		<property name="cookieName" value="userLocale" /> <property name="defaultLocale" 
+		value="zh"/> </bean> -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="cookieName" value="userLocale" />
+		<property name="cookieMaxAge" value="3600" />
+		<property name="defaultLocale" value="zh" />
+	</bean>
+	
+	<!-- <bean id = "stringHttpMessageConverter" class = "org.springframework.http.converter.StringHttpMessageConverter"/>
+	
+	<bean class ="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" >
+       <property name= "messageConverters" >
+             <list>
+                 <ref bean= "mappingJacksonHttpMessageConverter" />
+                 <ref bean= "stringHttpMessageConverter" />
+                 <ref bean= "jsonHttpMessageConverter" />           
+                 <ref bean= "formHttpMessageConverter" />
+             </list>
+        </property>
+</bean> -->
+
+	<!-- <bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<property name="validationMessageSource" ref="validatemessageSource"/>  	
+	</bean>
+	
+	 <bean id="validatemessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">  
+        <property name="basename" value="classpath:validateMessage/validatemessages"/>  
+        <property name="fileEncodings" value="utf-8"/>  
+        <property name="cacheSeconds" value="3600"/>  
+    </bean>  
+
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<bean class="com.jpajob.common.support.spring.converter.CodeEnumConveterFactory" />
+			</list>
+		</property>
+	</bean> -->
+</beans>

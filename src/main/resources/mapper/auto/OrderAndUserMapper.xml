@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.gravity.common.support.mybatis.auto.repository.OrderAndUserMapper">
+	<resultMap id="BaseResultMap" type="com.gravity.api.common.view.model.ShopDownServiceModel">
+		<result column="title" jdbcType="VARCHAR" property="title" />
+		<result column="employ_user_id" jdbcType="INTEGER" property="employUserId" />
+		<result column="service_price" jdbcType="VARCHAR" property="groupPrice" />
+		<result column="create_time" jdbcType="TIMESTAMP" property="dealTime" />
+	</resultMap>
+
+	<select id="selectDownServiceByUserId" resultMap="BaseResultMap">
+		select s.title, o.employ_user_id, o.service_price, o.create_time 
+		from user_order o, service_provider_service s 
+		where o.provider_user_id = #{userId} and o.service_id = s.id 
+		limit #{beginSize}, #{onePageSize}
+	</select>
+	
+	<select id="selectCountByUserId" resultType="Integer">
+		select count(*) 
+		from user_order 
+		where provider_user_id = #{userId}
+	</select>
+</mapper>

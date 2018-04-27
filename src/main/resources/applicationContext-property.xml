@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+	<!-- Application Properties -->
+	<util:properties id="application" location="classpath:properties/application.properties" />
+	<!-- mail setting Properties -->
+	<util:properties id="mailSetting" location="classpath:properties/mail.properties" />
+	<!-- file Path setting Properties -->
+	<util:properties id="filePath" location="classpath:properties/filePath.properties" />
+	<!-- server info Properties -->
+	<util:properties id="serverInfo" location="classpath:properties/server.properties" />
+	<!-- yunpian info Properties -->
+	<util:properties id="yunpianInfo" location="classpath:properties/yunpian.properties" />
+	<!-- config info Properties -->
+	<util:properties id="config" location="classpath:properties/config.properties" />
+
+</beans>

@@ -1,0 +1,12 @@
+{
+	"error" : {
+		"errorCode" : "500", 
+		"message" : "Internal Server Error"
+	},
+	"result" : {
+		"error" : {
+			"errorCode" : "500", 
+			"message" : "Internal Server Error"
+		}	
+	}
+}

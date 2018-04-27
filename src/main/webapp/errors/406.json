@@ -1,0 +1,12 @@
+{
+	"error" : {
+		"errorCode" : "406", 
+		"message" : "Not Acceptable"
+	},	
+	"result" : {
+		"error" : {
+			"errorCode" : "406", 
+			"message" : "Not Acceptable"
+		}	
+	}
+}

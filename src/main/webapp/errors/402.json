@@ -1,0 +1,12 @@
+{
+	"error" : {
+			"errorCode" : "402", 
+			"message" : "Payment Required"
+	},	
+	"result" : {
+		"error" : {
+			"errorCode" : "402", 
+			"message" : "Payment Required"
+		}	
+	}
+}

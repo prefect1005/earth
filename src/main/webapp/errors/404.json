@@ -1,0 +1,12 @@
+{
+	"error" : {
+		"errorCode" : "404", 
+		"message" : "Not Found"
+	},
+	"result" : {
+		"error" : {
+			"errorCode" : "404", 
+			"message" : "Not Found"
+		}	
+	}
+}

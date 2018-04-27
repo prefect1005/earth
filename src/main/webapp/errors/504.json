@@ -1,0 +1,12 @@
+{
+	"error" : {
+		"errorCode" : "504", 
+		"message" : "Gateway Timeout"
+	},
+	"result" : {
+		"error" : {
+			"errorCode" : "504", 
+			"message" : "Gateway Timeout"
+		}	
+	}
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<!-- 引入配置文件 
+	<properties resource="properties/jdbc.properties"/>-->
+	<classPathEntry
+		location="D:/document/mysql/mysql-connector-java/5.1.37/mysql-connector-java-5.1.37.jar" />
+	<classPathEntry
+		location="D:/document/org/mybatis/generator/mybatis-generator-core/1.3.2/mybatis-generator-core-1.3.2.jar" />
+
+	<context id="context">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+
+		<!--  <jdbcConnection driverClass="${jdbc.driverClassName}"
+			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}" />-->
+			
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://121.42.44.172:3306/earth" userId="earth" password="earth123" />
+
+		<javaModelGenerator targetPackage="com.gravity.common.support.mybatis.auto.model"
+			targetProject="earth/src/main/java" />
+		<sqlMapGenerator targetPackage="mapper.auto"
+			targetProject="earth/src/main/resources" />
+		<javaClientGenerator
+			targetPackage="com.gravity.common.support.mybatis.auto.repository"
+			targetProject="earth/src/main/java" type="XMLMAPPER" />
+
+		<table tableName="users">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="users_verify_code">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="category_first">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="category_second">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="category_mapping">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="service_provider_service">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="service_provider_identification_person">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="service_provider_identification_company">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="employ_identification_company">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="employ_identification_person">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="user_order">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="user_privilege">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="service_sales">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="home_company_logo">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="evaluate">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+
+		<table tableName="admin_basic_info">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="provider_income">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="provider_account">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="pay_to_platform">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+		
+		<table tableName="provider_with_draw">
+			<generatedKey column="id" sqlStatement="MySql"
+				identity="true" />
+		</table>
+	</context>
+</generatorConfiguration>

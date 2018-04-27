@@ -1,0 +1,81 @@
+
+.success-panel{
+    position: relative;
+    box-sizing: border-box;
+    width:850px;
+    height:270px;
+    margin-left:35px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 6px #565252;
+    -moz-box-shadow: 1px 1px 6px #565252;
+    box-shadow: 1px 1px 6px #565252;
+}
+.success-panel i{
+    display: block;
+    position: absolute;
+    top:3px;
+    right:3px;
+    width:16px;
+    height:16px;
+    background: url("../img/delete-blue.jpg") no-repeat center;
+    cursor: pointer;
+}
+.panel-con{
+    width:480px;
+    height:146px;
+   position: absolute;
+    top:64px;
+    left:200px;
+}
+.panel-up{
+    height:70px;
+    width:100%;
+}
+.success-logo{
+    height:70px;
+    width:64px;
+    background: url("../img/success-logo.jpg") no-repeat center;
+}
+.success-info{
+    height:70px;
+    width:400px;
+    padding: 15px 5px;
+}
+.success-info p{
+    color:#666;
+}
+.success-info p.title{
+    font-size:30px;
+    color:#666;
+}
+.success-info p.detail-info{
+    font-size:14px;
+}
+.success-info p.detail-info .split{
+    margin:0 13px;
+}
+.panel-btn{
+   height:53px;
+    width:100%;
+    position: absolute;
+    bottom:0;
+}
+.panel-btn .btn-goon{
+    display:block;
+    width:123px;
+    height:32px;
+    border-radius: 5px;
+    text-align: center;
+    line-height:32px ;
+    font-size:14px;
+    color:#fff;
+    background-color:#00a0e9 ;
+    margin:10px 0 0 15px;
+}
+.panel-btn a.link{
+    display: block;
+    height:53px;
+    line-height: 53px;
+    margin-left:90px;
+    color:#00a0e9;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.gravity.common.support.mybatis.auto.repository.PublicServiceAndSecondCategoryMapper">
+	<resultMap id="BaseResultMap"
+		type="com.gravity.api.common.view.model.ShopOtherServiceModel">
+		<id column="id" jdbcType="INTEGER" property="serviceId" />
+		<result column="title" jdbcType="VARCHAR" property="title" />
+		<result column="name" jdbcType="VARCHAR" property="secondType" />
+		<result column="gprice" jdbcType="VARCHAR" property="gprice" />
+		<result column="time" jdbcType="TIMESTAMP" property="publishTime" />
+	</resultMap>
+
+	<select id="selectByUserId" resultMap="BaseResultMap">
+		select s.id as id, s.title as title, c.name as name, s.group_price as gprice, s.create_time as time 
+		from service_provider_service s, category_second c 
+		where s.user_id = #{userId} and s.`online` = 1 and s.second_level = c.id 
+		limit #{beginSize}, #{onePageSize}
+	</select>
+	
+	<select id="selectCountByUserId" resultType="Integer">
+		select count(*) 
+		from service_provider_service 
+		where user_id = #{userId} and `online` = 1
+	</select>
+</mapper>

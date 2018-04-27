@@ -1,0 +1,126 @@
+.fwcontent-right-bottom>ul>li.my-publish-item{
+    position:relative;
+    width:248px;
+    height:346px;
+    margin:0 25px 30px 25px;
+}
+.my-publish-item .img-container{
+    position: relative;
+    width:248px;
+    height:298px;
+    background: url("../img/24Hours-bj.jpg") no-repeat center;
+}
+.my-publish-item .img-container .img-can{
+   position: absolute;
+    width:211px;
+    height:151px;
+    border:1px solid #bfbfbf;
+    top:16px;
+    left:17px;
+}
+.my-publish-item .img-container .img-can img{
+    width:211px;
+    height:151px;
+    border:1px solid #bfbfbf;
+}
+.my-publish-item .img-container h5{
+    position: absolute;
+    top:188px;
+    left:15px;
+}
+.my-publish-item .img-container .imgInfo{
+    position: absolute;
+    width:212px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    bottom:55px;
+    left:15px;
+}
+.my-publish-item .img-container .price-info{
+    position: absolute;
+    width:212px;
+    bottom:20px;
+    left:15px;
+    right:15px;
+}
+.my-publish-item .img-container .price-info .preferential-price{
+   float:left;
+    font-size:16px;
+    font-weight: bold;
+    color:#00a0e9;
+}
+.my-publish-item .img-container .price-info .original-price{
+    float:right;
+    font-size:12px;
+    color:#666;
+}
+.my-publish-item .opera{
+    position: absolute;
+    width:212px;
+    height:25px;
+    left:15px;
+    bottom:0;
+}
+.my-publish-item .opera .update-btn{
+    display: block;
+    width:73px;
+    height:20px;
+    line-height: 20px;
+    font-size:14px;
+    text-align:center;
+    background-color:#00a0e9;
+    border-radius: 10px;
+    color:#fff;
+    cursor: pointer;
+}
+.my-publish-item .opera .delete-btn{
+    display: block;
+    width:73px;
+    height:20px;
+    line-height: 20px;
+    font-size:14px;
+    text-align:center;
+    border:1px solid #00a0e9;
+    border-radius: 10px;
+    color:#00a0e9;
+    cursor: pointer;
+}
+.fwcontent-right .pager{
+    position: absolute;
+    width:355px;
+    height:40px;
+    bottom:15px;
+    right:15px;
+   /* border:1px solid red*/
+}
+.fwcontent-right .pager .pagerList{
+    padding:10px;
+    color:#000;
+    font-size:12px;
+}
+.fwcontent-right .pager .pagerList span{
+   margin:0 2px;
+}
+.fwcontent-right .pager .pagerList span a{
+    color:#000;
+    font-size:12px;
+}
+.pager .goPage input{
+    width:25px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding-left:4px;
+}
+.pager .goPage span.goBtn{
+    float:right;
+    display: block;
+    width:25px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    color:#fff;
+    margin:10px 0 0 5px;
+    background-color: #00a0e9;
+    cursor: pointer;
+}

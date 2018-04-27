@@ -1,0 +1,19 @@
+@charset "utf-8";
+.nav li{ padding-right:20px; margin-right:16px; border-right: solid 1px #CCC;}
+.recommend_none{ margin-top:100px; margin-left:-246px;}
+.recommend_hit{ margin-top:0px; margin-left:-246px;}
+.union_none01{ margin-top:230px; margin-left:-470px;}
+.union_hit01{ margin-top:0px; margin-left:-470px;}
+.union_none02{ margin-top:80px; margin-left:-246px;}
+.union_hit02{ margin-top:0px; margin-left:-246px;}
+.distribution_demo{ margin-left:9px; margin-right:9px;}
+.county_list ul{ margin-left:8px; margin-right:7px;}
+.county_list_hit{ margin-left:-185px; margin-top:-84px;}
+.county_specialty li{ margin-left:8px; margin-right:7px;}
+.county_specialty li p{ margin-left:-150px; margin-top:60px;}
+.county_scenic li{ margin-left:12px; margin-right:11px;}
+.county_scenic li p{ margin-left:-198px; margin-top:90px;}
+.ranking_demo{ margin-left:10px; margin-right:10px;}
+.site_th ul{ margin-left:2px; margin-right:2px;}
+.site_hit{ margin-left:-328px; margin-top:-82px;}
+.terminal_list ol p{ margin-left:4px; margin-right:4px;}

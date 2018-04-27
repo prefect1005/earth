@@ -1,0 +1,12 @@
+{
+	"error" : {
+		"errorCode" : "400", 
+		"message" : "Bad Request"
+	},
+	"result" : {
+		"error" : {
+			"errorCode" : "400", 
+			"message" : "Bad Request"
+		}	
+	}
+}

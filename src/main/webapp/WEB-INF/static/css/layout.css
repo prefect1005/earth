@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.fwtop{ width:100%; float:left; background:#fafafa;}
+.fwcontent{width:100%; float:left; background:#e5e5e5;}
+.fwfooter{ width:100%; float:left; background:#fafafa;}
+.fwcore{ width:1200px; margin:0 auto;}
+.logo{ width:95px; height:50px; float:left;}
+.logo img{ float:left;}
+.fwaccount{ width:50%; float:right; height:50px; margin-right:45px;}
+.fwaccount ul li{ height:14px; line-height:14px; margin:18px 0; padding:0 10px; float:right; border-left:1px solid #9C9C9C;}
+.fwaccount ul li:nth-child(4n){border-left:1px solid #fafafa;}
+.fwaccount ul li a{ font-family:"微软雅黑"; color:#666666; font-size:12px;}

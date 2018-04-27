@@ -1,0 +1,12 @@
+{
+	"error" : {
+		"errorCode" : "502", 
+		"message" : "Bad Gateway"
+	},
+	"result" : {
+		"error" : {
+			"errorCode" : "502", 
+			"message" : "Bad Gateway"
+		}
+	}
+}
